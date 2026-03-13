@@ -35,7 +35,7 @@ const Header = () => {
           <Button variant="ghost" size="sm">
             Login
           </Button>
-          <Button variant="hero" size="sm">
+          <Button variant="hero" size="sm" onClick={() => navigate("/get-started")}>
             Get Started
           </Button>
         </div>
