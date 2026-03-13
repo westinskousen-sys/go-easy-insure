@@ -1,7 +1,9 @@
+import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
 const CTASection = () => {
+  const navigate = useNavigate();
   return (
     <section className="border-t border-border bg-card py-20 md:py-28">
       <div className="container mx-auto px-4 text-center">
