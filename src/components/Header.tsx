@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Shield, Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -7,6 +8,7 @@ const navLinks = ["About", "How It Works", "FAQs", "Contact"];
 
 const Header = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const navigate = useNavigate();
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 border-b border-border bg-card/80 backdrop-blur-lg">
@@ -33,7 +35,7 @@ const Header = () => {
           <Button variant="ghost" size="sm">
             Login
           </Button>
-          <Button variant="hero" size="sm">
+          <Button variant="hero" size="sm" onClick={() => navigate("/get-started")}>
             Get Started
           </Button>
         </div>
@@ -65,7 +67,7 @@ const Header = () => {
               ))}
               <div className="mt-2 flex gap-2">
                 <Button variant="ghost" size="sm" className="flex-1">Login</Button>
-                <Button variant="hero" size="sm" className="flex-1">Get Started</Button>
+                <Button variant="hero" size="sm" className="flex-1" onClick={() => navigate("/get-started")}>Get Started</Button>
               </div>
             </div>
           </motion.div>

@@ -1,7 +1,9 @@
+import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
 const CTASection = () => {
+  const navigate = useNavigate();
   return (
     <section className="border-t border-border bg-card py-20 md:py-28">
       <div className="container mx-auto px-4 text-center">
@@ -11,7 +13,7 @@ const CTASection = () => {
         <p className="mx-auto mt-4 max-w-md text-muted-foreground">
           Join thousands who've switched to a faster, easier way to get insured.
         </p>
-        <Button variant="hero" size="lg" className="mt-8 gap-2 text-base px-10">
+        <Button variant="hero" size="lg" className="mt-8 gap-2 text-base px-10" onClick={() => navigate("/get-started")}>
           Get Started <ArrowRight className="h-4 w-4" />
         </Button>
       </div>

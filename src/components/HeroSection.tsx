@@ -1,8 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { ArrowRight, Zap, Shield, BarChart3 } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const HeroSection = () => {
+  const navigate = useNavigate();
   return (
     <section className="relative overflow-hidden pt-32 pb-20 md:pt-40 md:pb-28">
       {/* Background decoration */}
@@ -31,7 +33,7 @@ const HeroSection = () => {
           </p>
 
           <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
-            <Button variant="hero" size="lg" className="gap-2 text-base px-8">
+            <Button variant="hero" size="lg" className="gap-2 text-base px-8" onClick={() => navigate("/get-started")}>
               Get Started <ArrowRight className="h-4 w-4" />
             </Button>
             <Button variant="hero-outline" size="lg" className="text-base px-8">
