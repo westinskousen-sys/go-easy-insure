@@ -13,7 +13,7 @@ const CTASection = () => {
         <p className="mx-auto mt-4 max-w-md text-muted-foreground">
           Join thousands who've switched to a faster, easier way to get insured.
         </p>
-        <Button variant="hero" size="lg" className="mt-8 gap-2 text-base px-10">
+        <Button variant="hero" size="lg" className="mt-8 gap-2 text-base px-10" onClick={() => navigate("/get-started")}>
           Get Started <ArrowRight className="h-4 w-4" />
         </Button>
       </div>

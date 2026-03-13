@@ -33,7 +33,7 @@ const HeroSection = () => {
           </p>
 
           <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
-            <Button variant="hero" size="lg" className="gap-2 text-base px-8">
+            <Button variant="hero" size="lg" className="gap-2 text-base px-8" onClick={() => navigate("/get-started")}>
               Get Started <ArrowRight className="h-4 w-4" />
             </Button>
             <Button variant="hero-outline" size="lg" className="text-base px-8">

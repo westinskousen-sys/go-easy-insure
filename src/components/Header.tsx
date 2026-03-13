@@ -67,7 +67,7 @@ const Header = () => {
               ))}
               <div className="mt-2 flex gap-2">
                 <Button variant="ghost" size="sm" className="flex-1">Login</Button>
-                <Button variant="hero" size="sm" className="flex-1">Get Started</Button>
+                <Button variant="hero" size="sm" className="flex-1" onClick={() => navigate("/get-started")}>Get Started</Button>
               </div>
             </div>
           </motion.div>
