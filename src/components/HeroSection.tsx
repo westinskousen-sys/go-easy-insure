@@ -4,6 +4,7 @@ import { ArrowRight, Zap, Shield, BarChart3 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 const HeroSection = () => {
+  const navigate = useNavigate();
   return (
     <section className="relative overflow-hidden pt-32 pb-20 md:pt-40 md:pb-28">
       {/* Background decoration */}
