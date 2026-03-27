@@ -1,7 +1,7 @@
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 const faqs = [
-  { q: "Is InsureAI a real insurance agency?", a: "Yes! We're a licensed, independent insurance agency. We work with 50+ top-rated carriers to find you the best coverage." },
+  { q: "Is Sol Insurance a real insurance agency?", a: "Yes! We're a licensed, independent insurance agency. We work with 50+ top-rated carriers to find you the best coverage." },
   { q: "How does the AI work?", a: "Our AI analyzes your needs and compares quotes from dozens of carriers in real-time, finding you the best price and coverage combination in seconds." },
   { q: "What types of insurance do you offer?", a: "We offer auto, home, renters, life, and business insurance — all available through our self-serve platform." },
   { q: "Can I talk to a real person?", a: "Absolutely. While our AI handles most tasks, you can always reach a licensed agent through our chat or by scheduling a call." },

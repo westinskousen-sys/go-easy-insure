@@ -379,7 +379,7 @@ const GetStarted = () => {
             className="flex items-center gap-2 font-heading text-lg font-bold text-foreground"
           >
             <Shield className="h-6 w-6 text-primary" />
-            InsureAI
+            Sol Insurance
           </button>
           <span className="text-sm text-muted-foreground">
             Step {currentStep + 1} of {totalSteps}

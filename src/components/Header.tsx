@@ -15,7 +15,7 @@ const Header = () => {
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
         <a href="#" className="flex items-center gap-2 font-heading text-lg font-bold text-foreground">
           <Shield className="h-6 w-6 text-primary" />
-          InsureAI
+          Sol Insurance
         </a>
 
         {/* Desktop nav */}
