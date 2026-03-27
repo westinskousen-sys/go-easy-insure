@@ -32,7 +32,7 @@ const Header = () => {
         </nav>
 
         <div className="hidden items-center gap-3 md:flex">
-          <Button variant="ghost" size="sm">
+          <Button variant="ghost" size="sm" onClick={() => navigate("/login")}>
             Login
           </Button>
           <Button variant="hero" size="sm" onClick={() => navigate("/get-started")}>
@@ -66,7 +66,7 @@ const Header = () => {
                 </a>
               ))}
               <div className="mt-2 flex gap-2">
-                <Button variant="ghost" size="sm" className="flex-1">Login</Button>
+                <Button variant="ghost" size="sm" className="flex-1" onClick={() => { navigate("/login"); setMobileOpen(false); }}>Login</Button>
                 <Button variant="hero" size="sm" className="flex-1" onClick={() => navigate("/get-started")}>Get Started</Button>
               </div>
             </div>
