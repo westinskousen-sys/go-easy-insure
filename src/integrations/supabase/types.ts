@@ -14,7 +14,178 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      documents: {
+        Row: {
+          created_at: string
+          file_size: number | null
+          file_url: string | null
+          id: string
+          name: string
+          policy_id: string | null
+          type: string
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          file_size?: number | null
+          file_url?: string | null
+          id?: string
+          name: string
+          policy_id?: string | null
+          type: string
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          file_size?: number | null
+          file_url?: string | null
+          id?: string
+          name?: string
+          policy_id?: string | null
+          type?: string
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "documents_policy_id_fkey"
+            columns: ["policy_id"]
+            isOneToOne: false
+            referencedRelation: "policies"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      policies: {
+        Row: {
+          carrier: string
+          coverage_amount: number | null
+          created_at: string
+          details: Json | null
+          end_date: string | null
+          id: string
+          policy_number: string
+          premium_monthly: number | null
+          start_date: string
+          status: string
+          type: string
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          carrier: string
+          coverage_amount?: number | null
+          created_at?: string
+          details?: Json | null
+          end_date?: string | null
+          id?: string
+          policy_number: string
+          premium_monthly?: number | null
+          start_date: string
+          status?: string
+          type: string
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          carrier?: string
+          coverage_amount?: number | null
+          created_at?: string
+          details?: Json | null
+          end_date?: string | null
+          id?: string
+          policy_number?: string
+          premium_monthly?: number | null
+          start_date?: string
+          status?: string
+          type?: string
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
+      policy_change_requests: {
+        Row: {
+          change_type: string
+          created_at: string
+          description: string
+          id: string
+          policy_id: string
+          status: string
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          change_type: string
+          created_at?: string
+          description: string
+          id?: string
+          policy_id: string
+          status?: string
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          change_type?: string
+          created_at?: string
+          description?: string
+          id?: string
+          policy_id?: string
+          status?: string
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "policy_change_requests_policy_id_fkey"
+            columns: ["policy_id"]
+            isOneToOne: false
+            referencedRelation: "policies"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      profiles: {
+        Row: {
+          address: string | null
+          avatar_url: string | null
+          city: string | null
+          created_at: string
+          full_name: string | null
+          id: string
+          phone: string | null
+          state: string | null
+          updated_at: string
+          user_id: string
+          zip_code: string | null
+        }
+        Insert: {
+          address?: string | null
+          avatar_url?: string | null
+          city?: string | null
+          created_at?: string
+          full_name?: string | null
+          id?: string
+          phone?: string | null
+          state?: string | null
+          updated_at?: string
+          user_id: string
+          zip_code?: string | null
+        }
+        Update: {
+          address?: string | null
+          avatar_url?: string | null
+          city?: string | null
+          created_at?: string
+          full_name?: string | null
+          id?: string
+          phone?: string | null
+          state?: string | null
+          updated_at?: string
+          user_id?: string
+          zip_code?: string | null
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
