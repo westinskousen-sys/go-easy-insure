@@ -10,6 +10,7 @@ import GetStarted from "./pages/GetStarted.tsx";
 import Login from "./pages/Login.tsx";
 import Portal from "./pages/Portal.tsx";
 import NotFound from "./pages/NotFound.tsx";
+import Chatbot from "./components/Chatbot";
 
 const queryClient = new QueryClient();
 
