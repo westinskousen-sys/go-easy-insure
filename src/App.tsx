@@ -9,6 +9,8 @@ import Index from "./pages/Index.tsx";
 import GetStarted from "./pages/GetStarted.tsx";
 import Login from "./pages/Login.tsx";
 import Portal from "./pages/Portal.tsx";
+import Blog from "./pages/Blog.tsx";
+import BlogPost from "./pages/BlogPost.tsx";
 import NotFound from "./pages/NotFound.tsx";
 import Chatbot from "./components/Chatbot";
 
@@ -25,6 +27,8 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/get-started" element={<GetStarted />} />
             <Route path="/login" element={<Login />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/:slug" element={<BlogPost />} />
             <Route
               path="/portal"
               element={
