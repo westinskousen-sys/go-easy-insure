@@ -4,23 +4,23 @@ import { Layers, MessageSquare, Clock, ShieldCheck } from "lucide-react";
 const features = [
   {
     icon: Layers,
-    title: "Compare Quotes in Seconds",
-    description: "Our AI scans 50+ carriers to find you the best coverage at the best price — instantly.",
-  },
-  {
-    icon: MessageSquare,
-    title: "24/7 AI Support",
-    description: "Get answers to your policy questions anytime, day or night, without waiting on hold.",
-  },
-  {
-    icon: Clock,
-    title: "Bind Coverage Instantly",
-    description: "No paperwork, no waiting. Get your policy documents in your inbox within minutes.",
+    title: "Shop Dozens of Carriers Instantly",
+    description: "We compare quotes from multiple top-rated carriers in seconds — so you get the best coverage at the best price without lifting a finger.",
   },
   {
     icon: ShieldCheck,
     title: "Independent & Unbiased",
-    description: "We work for you, not the carriers. Get honest recommendations tailored to your needs.",
+    description: "We work for you, not the carriers. As an independent agency, we give you honest recommendations tailored to your actual needs.",
+  },
+  {
+    icon: Clock,
+    title: "Bind Coverage in Minutes",
+    description: "No paperwork, no fax machines, no runaround. Get real, bindable quotes and your policy documents in minutes — not days.",
+  },
+  {
+    icon: MessageSquare,
+    title: "Real People When You Need Them",
+    description: "Our quoting process is fast and digital, but our team is always available to help you understand your options or handle claims.",
   },
 ];
 
@@ -30,10 +30,13 @@ const FeaturesSection = () => {
       <div className="container mx-auto px-4">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold text-foreground md:text-4xl">
-            Insurance, reimagined.
+            Insurance, radically simplified.
           </h2>
           <p className="mt-4 text-muted-foreground">
-            We combine the trust of an independent agency with the speed of AI to give you a better experience.
+            Sol Insurance is a modern, AI-powered agency specializing in home, auto, and renters insurance. We make it radically simple to bundle them together so you get better coverage at a better price.
+          </p>
+          <p className="mt-3 text-sm text-muted-foreground">
+            We're not a call center. We're not a legacy broker with a fax machine. Sol was built from the ground up on smart technology.
           </p>
         </div>
 

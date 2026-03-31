@@ -2,9 +2,21 @@ import { motion } from "framer-motion";
 import { UserPlus, SlidersHorizontal, CheckCircle2 } from "lucide-react";
 
 const steps = [
-  { icon: UserPlus, title: "Tell Us About You", description: "Answer a few quick questions about what you need covered." },
-  { icon: SlidersHorizontal, title: "Compare & Customize", description: "Our AI finds the best quotes and lets you tailor your coverage." },
-  { icon: CheckCircle2, title: "Get Insured", description: "Bind your policy instantly and get your documents via email." },
+  {
+    icon: UserPlus,
+    title: "Tell Us About Yourself",
+    description: "Answer a few quick questions about your home, car, or rental. No lengthy forms. No junk mail. Just what we need to find you the best options.",
+  },
+  {
+    icon: SlidersHorizontal,
+    title: "Compare Real Quotes",
+    description: "We instantly shop top-rated carriers and show you real, bindable quotes side by side — so you can see exactly what you're getting and what it costs.",
+  },
+  {
+    icon: CheckCircle2,
+    title: "Bundle & Save",
+    description: "Most customers save significantly by bundling home + auto or renters + auto. Pick your coverage, bind your policy, and you're done. The whole thing takes minutes.",
+  },
 ];
 
 const HowItWorksSection = () => {

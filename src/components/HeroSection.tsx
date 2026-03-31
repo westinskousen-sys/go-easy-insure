@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import { ArrowRight, Zap, Shield, BarChart3 } from "lucide-react";
+import { ArrowRight, Zap, Shield, Award, Lock } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 const HeroSection = () => {
@@ -20,44 +20,46 @@ const HeroSection = () => {
         >
           <div className="mx-auto mb-6 inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-1.5 text-sm font-medium text-muted-foreground">
             <Zap className="h-3.5 w-3.5 text-accent" />
-            AI-Powered Insurance — No Agents Required
+            Digital-First Insurance — Based in Utah, Built for Everywhere
           </div>
 
           <h1 className="mx-auto max-w-3xl text-4xl font-extrabold leading-tight tracking-tight text-foreground md:text-6xl">
-            Smarter Insurance,{" "}
-            <span className="text-primary">Instantly.</span>
+            Smarter Coverage,{" "}
+            <span className="text-primary">Built for Real Life.</span>
           </h1>
 
           <p className="mx-auto mt-5 max-w-xl text-lg text-muted-foreground">
-            Compare quotes, customize coverage, and get insured in minutes — all powered by AI, no paperwork or phone calls needed.
+            Bundle your home and auto. Compare top carriers instantly. Save time and money — without the hassle.
           </p>
 
           <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <Button variant="hero" size="lg" className="gap-2 text-base px-8" onClick={() => navigate("/get-started")}>
-              Get Started <ArrowRight className="h-4 w-4" />
+              Get My Free Quote <ArrowRight className="h-4 w-4" />
             </Button>
-            <Button variant="hero-outline" size="lg" className="text-base px-8">
-              Learn More
+            <Button variant="hero-outline" size="lg" className="text-base px-8" onClick={() => {
+              document.getElementById("how-it-works")?.scrollIntoView({ behavior: "smooth" });
+            }}>
+              See How It Works
             </Button>
           </div>
         </motion.div>
 
-        {/* Stats row */}
+        {/* Trust bar */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.25 }}
-          className="mx-auto mt-16 grid max-w-2xl grid-cols-3 gap-6"
+          className="mx-auto mt-16 grid max-w-3xl grid-cols-2 gap-4 sm:grid-cols-4"
         >
           {[
-            { icon: Shield, label: "Carriers", value: "50+" },
-            { icon: BarChart3, label: "Avg. Savings", value: "32%" },
-            { icon: Zap, label: "Quote Time", value: "<2 min" },
-          ].map(({ icon: Icon, label, value }) => (
-            <div key={label} className="flex flex-col items-center gap-1">
+            { icon: Shield, label: "Licensed & Appointed" },
+            { icon: Award, label: "A-Rated Carriers" },
+            { icon: Zap, label: "Utah-Based Team" },
+            { icon: Lock, label: "No Spam. No Selling Your Data." },
+          ].map(({ icon: Icon, label }) => (
+            <div key={label} className="flex flex-col items-center gap-2 rounded-lg border border-border bg-card/60 px-3 py-4">
               <Icon className="h-5 w-5 text-primary" />
-              <span className="text-2xl font-bold text-foreground md:text-3xl">{value}</span>
-              <span className="text-xs text-muted-foreground">{label}</span>
+              <span className="text-xs font-medium text-muted-foreground text-center">{label}</span>
             </div>
           ))}
         </motion.div>

@@ -1,11 +1,34 @@
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 const faqs = [
-  { q: "Is Sol Insurance a real insurance agency?", a: "Yes! We're a licensed, independent insurance agency. We work with 50+ top-rated carriers to find you the best coverage." },
-  { q: "How does the AI work?", a: "Our AI analyzes your needs and compares quotes from dozens of carriers in real-time, finding you the best price and coverage combination in seconds." },
-  { q: "What types of insurance do you offer?", a: "We offer auto, home, renters, life, and business insurance — all available through our self-serve platform." },
-  { q: "Can I talk to a real person?", a: "Absolutely. While our AI handles most tasks, you can always reach a licensed agent through our chat or by scheduling a call." },
-  { q: "How fast can I get a policy?", a: "Most customers are fully insured within 5 minutes. You'll receive your policy documents via email instantly after binding." },
+  {
+    q: "What types of insurance does Sol offer?",
+    a: "We specialize in personal lines insurance — home, auto, and renters. We focus on bundles (home + auto, renters + auto) because that's where our customers get the most value.",
+  },
+  {
+    q: "How does Sol find me the best rate?",
+    a: "Sol shops multiple top-rated carriers simultaneously and presents you with real, bindable quotes. We're not tied to one company — our job is to find the best fit for you.",
+  },
+  {
+    q: "Is Sol a real insurance agency?",
+    a: "Yes. Sol Insurance is a licensed insurance agency. Your policies are backed by A-rated carriers — Sol handles the shopping, quoting, and service so you don't have to.",
+  },
+  {
+    q: "Why should I bundle my home and auto (or renters and auto)?",
+    a: "Bundling typically unlocks multi-policy discounts from carriers, meaning you pay less than if you bought each policy separately. It also simplifies your insurance — one agency, one renewal conversation.",
+  },
+  {
+    q: "Will I work with a real person if I have questions?",
+    a: "Yes. While our quoting process is fast and digital, our team is available to help you understand your options, make changes, or handle claims support.",
+  },
+  {
+    q: "How is Sol different from going directly to an insurance company?",
+    a: "When you go direct, you only see one company's rates. Sol shops multiple carriers at once so you can compare and get the best value — without having to do it yourself.",
+  },
+  {
+    q: "Is my information safe?",
+    a: "Absolutely. We use industry-standard encryption and never sell your personal data to third parties.",
+  },
 ];
 
 const FAQSection = () => {
