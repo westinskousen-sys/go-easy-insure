@@ -1,5 +1,6 @@
 import { useState, useMemo } from "react";
 import { useNavigate } from "react-router-dom";
+import { supabase } from "@/integrations/supabase/client";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -291,6 +292,7 @@ const GetStarted = () => {
   const [selectedLines, setSelectedLines] = useState<InsuranceLine[]>([]);
   const [currentStep, setCurrentStep] = useState(0); // 0 = pick lines, 1 = basic, 2+ = line-specific, last = review
   const [answers, setAnswers] = useState<Record<string, string>>({});
+  const [submittingQuote, setSubmittingQuote] = useState(false);
 
   const toggleLine = (line: InsuranceLine) =>
     setSelectedLines((prev) =>
@@ -329,6 +331,32 @@ const GetStarted = () => {
 
   const setAnswer = (id: string, val: string) =>
     setAnswers((prev) => ({ ...prev, [id]: val }));
+
+  const handleSubmitQuoteLead = async () => {
+    if (submittingQuote) return;
+    setSubmittingQuote(true);
+
+    try {
+      const payload = {
+        full_name: answers.fullName || null,
+        email: answers.email || null,
+        phone: answers.phone || null,
+        date_of_birth: answers.dob || null,
+        zip_code: answers.zip || null,
+        coverage_lines: selectedLines,
+        raw_answers: answers,
+      };
+
+      const { error } = await (supabase as any).from("quote_leads").insert(payload);
+      if (error) throw error;
+
+      navigate("/confirmation");
+    } catch (error) {
+      console.error("Failed to submit quote lead:", error);
+    } finally {
+      setSubmittingQuote(false);
+    }
+  };
 
   const renderField = (q: QuestionDef) => (
     <div key={q.id} className="space-y-1.5">
@@ -529,12 +557,11 @@ const GetStarted = () => {
               variant="hero"
               size="lg"
               className="gap-2 px-10"
-              onClick={() => {
-                // In a real app, submit data here
-                alert("Quotes are being generated! 🎉");
-              }}
+              onClick={handleSubmitQuoteLead}
+              disabled={submittingQuote}
             >
-              Get My Quotes <ArrowRight className="h-4 w-4" />
+              {submittingQuote ? "Submitting..." : "Get My Quotes"}
+              <ArrowRight className="h-4 w-4" />
             </Button>
           ) : (
             <Button

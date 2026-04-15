@@ -7,12 +7,14 @@ import { AuthProvider } from "@/contexts/AuthContext";
 import ProtectedRoute from "@/components/ProtectedRoute";
 import Index from "./pages/Index.tsx";
 import GetStarted from "./pages/GetStarted.tsx";
+import Confirmation from "./pages/Confirmation.tsx";
 import Login from "./pages/Login.tsx";
 import Portal from "./pages/Portal.tsx";
 import Blog from "./pages/Blog.tsx";
 import BlogPost from "./pages/BlogPost.tsx";
 import NotFound from "./pages/NotFound.tsx";
 import Chatbot from "./components/Chatbot";
+import CheckPolicy from "./pages/CheckPolicy.tsx";
 
 const queryClient = new QueryClient();
 
@@ -26,9 +28,11 @@ const App = () => (
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/get-started" element={<GetStarted />} />
+            <Route path="/confirmation" element={<Confirmation />} />
             <Route path="/login" element={<Login />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/:slug" element={<BlogPost />} />
+            <Route path="/check-policy" element={<CheckPolicy />} />
             <Route
               path="/portal"
               element={

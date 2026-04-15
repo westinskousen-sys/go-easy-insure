@@ -1,3 +1,5 @@
+import CheckPolicySection from "@/components/CheckPolicySection";
+import BORSection from "@/components/BORSection";
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import FeaturesSection from "@/components/FeaturesSection";
@@ -14,6 +16,8 @@ const Index = () => {
       <HeroSection />
       <FeaturesSection />
       <HowItWorksSection />
+      <CheckPolicySection />
+      <BORSection />
       <ContentSection />
       <FAQSection />
       <CTASection />
