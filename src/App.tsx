@@ -15,6 +15,7 @@ import BlogPost from "./pages/BlogPost.tsx";
 import NotFound from "./pages/NotFound.tsx";
 import Chatbot from "./components/Chatbot";
 import CheckPolicy from "./pages/CheckPolicy.tsx";
+import About from "./pages/About.tsx";
 
 const queryClient = new QueryClient();
 
@@ -33,6 +34,7 @@ const App = () => (
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/:slug" element={<BlogPost />} />
             <Route path="/check-policy" element={<CheckPolicy />} />
+            <Route path="/about" element={<About />} />
             <Route
               path="/portal"
               element={
